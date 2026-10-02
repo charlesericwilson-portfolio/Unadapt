@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/unadapt/__init__.py
+src/unadapt/main.py
+src/unadapt.egg-info/PKG-INFO
+src/unadapt.egg-info/SOURCES.txt
+src/unadapt.egg-info/dependency_links.txt
+src/unadapt.egg-info/top_level.txt
