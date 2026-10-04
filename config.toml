@@ -1,0 +1,50 @@
+[model]
+base_url = "http://localhost:8080/v1"
+model = "echo"
+api_key = "not-needed"
+temperature = 0.7
+max_tokens = 2048
+
+[memory]
+enabled = true
+
+# OpenAI-compatible embeddings endpoint.
+base_url = "http://localhost:8081/v1"
+model = "embedding-model"
+api_key = "not-needed"
+
+persist_directory = ".unadapt_memory"
+collection_name = "unadapt_memory"
+
+[summarizer]
+enabled = true
+base_url = "http://localhost:8080/v1"
+model = "summarizer"
+api_key = "not-needed"
+
+max_raw_output_chars = 6000
+tool_summary_max_tokens = 1500
+
+context_trigger_chars = 260000
+context_summary_max_tokens = 10000
+
+[safety]
+denylist = [
+    "rm -rf",
+    "rm -r /",
+    "$(echo rm) -rf /tmp",
+    "> /dev/",
+    "if=/dev/zero",
+    "mkfs",
+    "shred",
+    "wipefs",
+    "fdisk",
+    "parted",
+    "sudo rm",
+    "rm --no-preserve-root",
+    ":(){ :|:& };:",
+    "fork bomb",
+    "> /dev/sda",
+    "chmod -R 777 /",
+    "chown -R",
+]

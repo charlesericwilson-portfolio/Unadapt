@@ -3,3 +3,7 @@ Name: unadapt
 Version: 0.1.0
 Summary: A LangChain-based reimplementation of the Adapt agent runtime.
 Requires-Python: >=3.10
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-chroma
+Requires-Dist: tomli>=2.0; python_version < "3.11"
