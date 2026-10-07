@@ -1,6 +1,0 @@
-langchain-core
-langchain-openai
-langchain-chroma
-
-[:python_version < "3.11"]
-tomli>=2.0
